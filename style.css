@@ -23,11 +23,12 @@ body {
     width: 50%;
   }
   
-
+  
+  
   .sidebar {
     margin: 0;
     padding: 0;
-    width: 200px;
+    width: 220px;
     background-color: #f1f1f1;
     position: fixed;
     height: 100%;
@@ -50,18 +51,28 @@ body {
     background-color: #555;
     color: white;
   }
-  
+
   div.content {
-    margin-left: 200px;
+    margin-left: 220px;
     padding: 1px 16px;
     /* height: 1000px; */
+  }
+
+  div.title {
+    background-color: #d0d6d8;
+    font-size: larger;
+    font-weight: bold;
+    /* border-style: solid; */
+    top: 50%;
+    left: 1%;
+    right: 1%;
   }
 
   .tag {
     display: block;
     /* width: 150px; */
     height: 40px;
-    background: #b0cbe6;
+    background: #e7e9eb;
     padding: 10px;
     text-align: center;
     text-decoration:none;
@@ -76,14 +87,14 @@ body {
   .button {
     display: block;
     /* width: 150px; */
-    height: 40px;
-    background: #1784dd;
+    height: 50px;
+    background: #a7d2f3;
     padding: 10px;
     text-align: center;
     text-decoration:none;
     display:inline-block;
     border-radius: 5px;
-    color: rgb(247, 238, 238);
+    color: rgb(0, 0, 0);
     font-weight: bold;
     line-height: 25px;
 }
