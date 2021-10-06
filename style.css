@@ -68,14 +68,14 @@ body {
     right: 1%;
   }
 
-  .tag {
+  div.hashtag {
     display: block;
     height: 40px;
-    background: #e7e9eb;
+    background: #e5e8eb;
     padding: 10px;
     text-align: center;
-    text-decoration:none;
-    display:inline-block;
+    text-decoration: none;
+    display: inline-block;
     border-radius: 5px;
     color: rgb(0, 0, 0);
     font-weight: bold;
@@ -90,8 +90,8 @@ body {
     background: #a7d2f3;
     padding: 10px;
     text-align: center;
-    text-decoration:none;
-    display:inline-block;
+    text-decoration: none;
+    display: inline-block;
     border-radius: 5px;
     color: rgb(0, 0, 0);
     font-weight: bold;
