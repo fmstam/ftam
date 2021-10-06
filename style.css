@@ -59,10 +59,13 @@ body {
   }
 
   div.title {
-    background-color: #d0d6d8;
+    background-color: #e5e8e9;
     font-size: larger;
     font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
     /* border-style: solid; */
+    font-weight: bold;
     top: 50%;
     left: 1%;
     right: 1%;

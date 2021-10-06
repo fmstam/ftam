@@ -42,7 +42,7 @@
     <li><b>Web and micro-services stack</b> includes HTML, CSS, javascript, Django, and Docker</li>
     <li><b>Database stack</b> includes MySQL, SQLite, BigQuery, Oracle, PL/SQL</li>
   </ul> 
-<hr>
+
 </div>
 
 <!-- list of projects ---------------------------------------------------------------->
@@ -154,7 +154,7 @@
       pipeline.addTask(new Scale(downSamplingFactor)); // scale down
       pipeline.addTask(new IlluminationSurface(IlluminationSurface.SurfaceType.Polynomial, polynomialDegree)); // estimate the illumination field
       pipeline.addTask(new Scale((1 / downSamplingFactor))); // scale up back    
-      outputImage = imageFilter.run(inputImage, pipeline); // run the pipeline on the image.
+      outputImage = imageFilter.run(inputImage, pipeline); // apply the pipeline on the image.
       </pre>
     Moreover, Sheba allows adding compiled plugins (.jar files) without changing the code or modifying the pipelines. That is adding or updating functionalities on the fly. 
     This can be helpful when a team works on the pipeline where plugins can be tested locally and deployed to the final system.
@@ -186,7 +186,7 @@
       <a class="button" href="https://github.com/emanSaad/Peptide_Mass_Fingerprting_App">source code</a>
       <p> Protein identification using Mass Spectrometry (MS) is essential in the study of proteomics and one of the most popular methods for protein identification using MS data. This project provides a free computational tool for protein identification using PMF data. It introduces a new scoring method to help in identifying the correct protein. </p>
     </li> 
-  </ul> <hr>
+  </ul> 
 </div>
 
 <div class="content" id="research">
@@ -250,7 +250,7 @@
         This algorithm is similar to the Gradient Boosting with stopping criterion where the R-squared is used to determine the deterioration in the correction boosting.
       </p>
     </li> 
-  </ul> <hr>
+  </ul> 
 </div>
 
 <div class="content" id="dataScience">
@@ -261,7 +261,7 @@
       <p> This work is the minimal pytorch implementation of some sequence to sequence (seq2seq) models:
           Loung seq2seq model: used in NLP sequence to sequence translation
           Pointer networks: an important piece in many combinatorial neural networks. 
-          <a class="button" href="https://github.com/fmstam/seq2seq_with_deep_attention">source code some examples</a>
+          <a class="button" href="https://github.com/fmstam/seq2seq_with_deep_attention">source code and some examples</a>
           
       </p>
       <div class="row">
@@ -286,7 +286,7 @@
       
   </li> 
 
-  </ul> <hr>
+  </ul> 
 </div>
 </body>
 </html>
