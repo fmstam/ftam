@@ -42,7 +42,7 @@
     <li><b>Web and micro-services stack</b> includes HTML, CSS, javascript, Django, and Docker</li>
     <li><b>Database stack</b> includes MySQL, SQLite, BigQuery, Oracle, PL/SQL</li>
   </ul> 
-<hr>
+
 </div>
 
 <!-- list of projects ---------------------------------------------------------------->
@@ -51,37 +51,42 @@
   <div class="title">Selected Software:</div> <a href="#">Go to top</a>
   <ul>
     <li><b>Thammar University Website</b><br> 
-        <div class="tag"> PHP, MySQL, HTML, CSS, and javascript</div>
+        <div class="hashtag"> PHP, MySQL, HTML, CSS, and javascript</div>
         <p> The university website with both frontend and backend being developed to allow a flexible customization of dynamic creation of pages and content.</p>
     </li> 
 
     <li><b>Student Management System </b><br>
-      <div class="tag"> SQL, PL/SQL, C++</div>
+      <div class="hashtag"> SQL, PL/SQL, C++</div>
       <p> The complete student management system from registration to certificates production with flexible backend to customize entry requirement and reports/certificates production.</p>
     </li> 
 
     <li><b>Warehouse Management System</b><br>
-      <div class="tag"> SQL, PL/SQL, C++</div>
+      <div class="hashtag"> SQL, PL/SQL, C++</div>
       <p>Warehouse management for one of the baggiest trading companies.</p>
     </li> 
 
     <li><b>Trademark Management System</b><br>
-      <div class="tag"> SQL, PL/SQL, C++</div>
+      <div class="hashtag"> SQL, PL/SQL, C++</div>
       <p>Trademark management system for one of the baggiest trading companies.</p>
     </li> 
 
     <li><b>Sales Management System</b><br>
-      <div class="tag"> VB, SQL-Server, C++</div>
+      <div class="hashtag"> VB, SQL-Server, C++</div>
       <p>Sales Management System for retailers.</p>
     </li> 
 
+    <li><b>E-bidding</b><br>
+      <div class="hashtag"> Python, Django, HTML, javascript, SQLite</div>
+      <p>A backend solution for E-bidding, on progress ...</p>
+    </li> 
+    
 
     <li><b>CEOT-DRL is a deep reinforcement learning (DRL) package</b><br>
-      <div class="tag"> Deep Learning, Deep Reinforcement Learning, Python, Pytorch, TF2, matplotlib</div>
+      <div class="hashtag"> Deep Learning, Deep Reinforcement Learning, Python, Pytorch, TF2, matplotlib</div>
       <!-- <img src="images/p-trap.png" alt="P-TRAP" class="left" style="width: 80%"/>       -->
       <p>
-        CEOT-DRL is a deep reinforcement learning (DRL) package mainly used in the Centro de Electrónica, Optoelectronica e Telecomunicações (CEOT) research center: https://www.ceot.ualg.pt/ for DRL research on networking and systems. CEOT-DRL is designed such that it abstracts almost everything. 
-        Therefore, regardless of which computational graph platform is used to define the neural nets, it still can run smoothly.
+        CEOT-DRL is a deep reinforcement learning (DRL) package developed during my stay in the Centro de Electrónica, Optoelectronica e Telecomunicações (CEOT) research center: https://www.ceot.ualg.pt/ for DRL research on networking and systems. CEOT-DRL is designed such that it abstracts almost everything. 
+        Therefore, regardless of which computational graph platform is used to define the neural nets, it can still run smoothly.
       </p>
 
       Inspired by the Matlab Reinforcement Learning Toolbox, CEOT-DRL decomposes the learning task into scenario, environment, model, and a training manager.
@@ -94,7 +99,7 @@
       
       
       <pre class="prettyprint">
-        
+
         import sys
         import timeit
         
@@ -127,14 +132,14 @@
 
 
     <li><b>Sheba: a lightweight image processing library</b><br>
-      <div class="tag"> Java, NetBeans Platform, Efficient Java Matrix Library (EJML)</div>
+      <div class="hashtag"> Java, NetBeans Platform, Efficient Java Matrix Library (EJML)</div>
       <!-- <img src="images/p-trap.png" alt="P-TRAP" class="left" style="width: 80%"/>       -->
   
       <p>A free open source lightweight image (and signal) processing package which is designed ground-up based on the best practices found in some existed packages like imagej and cellprofiler.
-      Sheba is headless with only abstract classes (interfaces in fact) to develop functional components. It is designed to act as a container of components like channel, plugin, filter, or pipeline. It basically creates pipelines and executes them, which is helpful for fast prototyping, or a developing a lightweight core module of an application that requires image processing.
+      Sheba is headless with only abstract classes (interfaces in fact) to develop functional components. It is designed to act as a container of components like channel, plugin, filter, or pipeline. It basically creates pipelines and executes them, which is helpful for fast prototyping, or developing a lightweight core module of an application that requires image processing.
       The main advantage of Sheba is its high modulation, and simplicity to create image processing pipelines.
       In Sheba the input and output are channels. An image, for instance, can contain multiple channels and can be processed by filters. To realize image processing pipelines,
-      Sheba arranges them in a sequence of filters (i.e. a pipeline). For instance, if the task is to segment an image. This can be done by creating a pipeline that starts by gaussian filter (smoothing plugin), followed by a grayscale filter (conversion plugin), followed by a segmentation filter (segmentation plugin).
+      Sheba arranges them in a sequence of filters (i.e. a pipeline). For instance, if the task is to segment an image. This can be done by creating a pipeline that starts by a Gaussian filter (smoothing plugin), followed by a grayscale filter (conversion plugin), followed by a segmentation filter (segmentation plugin).
       </p>
 
       The following example shows how to calculate a polynomial illumination field from a grayscale image.
@@ -149,15 +154,15 @@
       pipeline.addTask(new Scale(downSamplingFactor)); // scale down
       pipeline.addTask(new IlluminationSurface(IlluminationSurface.SurfaceType.Polynomial, polynomialDegree)); // estimate the illumination field
       pipeline.addTask(new Scale((1 / downSamplingFactor))); // scale up back    
-      outputImage = imageFilter.run(inputImage, pipeline); // run the pipeline on the image.
+      outputImage = imageFilter.run(inputImage, pipeline); // apply the pipeline on the image.
       </pre>
-    Moreover, Sheba is allows adding compiled plugins without changing the code or modifying the pipelines. 
+    Moreover, Sheba allows adding compiled plugins (.jar files) without changing the code or modifying the pipelines. That is adding or updating functionalities on the fly. 
     This can be helpful when a team works on the pipeline where plugins can be tested locally and deployed to the final system.
     
     </li> 
 
     <li><b>P-TRAP: a panicle trait phenotyping tool</b><br>
-      <div class="tag"> Java, NetBeans Platform, OpenCV</div>
+      <div class="hashtag"> Java, NetBeans Platform, OpenCV</div>
       <img src="images/p-trap.png" alt="P-TRAP" class="left" style="width: 80%"/>      
       <a class="button" href="https://bmcplantbiol.biomedcentral.com/articles/10.1186/1471-2229-13-122">article</a>|
       <a class="button" href="articles/P-TRAP_manual.pdf">See the user manual</a>
@@ -169,26 +174,26 @@
     </li> 
 
     <li><b>DNAGear- a free software for spa type identification in Staphylococcus aureus</b><br>
-      <div class="tag"> Java, NetBeans Platform</div>
+      <div class="hashtag"> Java, NetBeans Platform</div>
       <img src="images/dnagear.jpeg" alt="DNAGear" class="left"/>      
       <a class="button" href="https://link.springer.com/article/10.1186/1756-0500-5-642">article</a>|<a class="button" href="https://github.com/fmstam/DNAGEAR">source code</a>
       <p>A free and open source software with a user friendly interface written all in Java on top of NetBeans Platform to perform spa typing, detecting new repeats and new spa types and synchronizing automatically the files with the open access database. The installation is easy and the application is platform independent. In fact, the SPA identification is a formal regular expression matching problem and the results are 100% exact. As the program is using Java embedded modules written over string manipulation of well established algorithms, the exactitude of the solution is perfectly established.        </p>
     </li> 
 
     <li><b>Peptide Mass Fingerprinting Tool Using Mass Spectrum Generated By MALDI-TOF:</b><br>
-      <div class="tag"> Java, NetBeans Platform, BioJava</div>
+      <div class="hashtag"> Java, NetBeans Platform, BioJava</div>
       <img src="images/pmf.png" alt="PMF" class="left" style="width: 50%"/> 
       <a class="button" href="https://github.com/emanSaad/Peptide_Mass_Fingerprting_App">source code</a>
       <p> Protein identification using Mass Spectrometry (MS) is essential in the study of proteomics and one of the most popular methods for protein identification using MS data. This project provides a free computational tool for protein identification using PMF data. It introduces a new scoring method to help in identifying the correct protein. </p>
     </li> 
-  </ul> <hr>
+  </ul> 
 </div>
 
 <div class="content" id="research">
   <div class="title">Research: Selected Articles:</div> <a href="#">Go to top</a>
   <ul>
     <li><b>Radio Resource Scheduling in 5G Networks using Deep Reinforcement Learning:</b><br>
-      <div class="tag"> Deep Learning, Deep Reinforcement Learning, Pointer-Nets, Deep Pointer-Critic models, Sequence-to-Sequence, LSTM, 5G</div>
+      <div class="hashtag"> Deep Learning, Deep Reinforcement Learning, Pointer-Nets, Deep Pointer-Critic models, Sequence-to-Sequence, LSTM, 5G</div>
    
       <img src="images/ptr_critic.png" alt="sdn" style="width: 60%"/> 
       <img src="images/ptr_rrs_.png" alt="sdn" style="width: 100%"/> 
@@ -203,7 +208,7 @@
     </li> 
 
     <li><b>Load Balancing in Software-Defined Networking:</b><br>
-      <div class="tag"> NP-hard problems, analytical solutions, heuristics, convex optimization</div>
+      <div class="hashtag"> NP-hard problems, analytical solutions, heuristics, convex optimization</div>
       <div class="row">
         <div class="column">
           <img src="images/SMP_model_1-0.png" alt="sdn" style="width: 80%"/> 
@@ -213,7 +218,7 @@
         </div>
       </div>
 
-      <a class="button" href="https://www.sciencedirect.com/science/article/abs/pii/S138912861930475X">Comnet Elsevier article</a>
+      <a class="button" href="https://www.sciencedirect.com/science/article/abs/pii/S138912861930475X">ComNet Elsevier article</a>
       <a class="button" href="https://ieeexplore.ieee.org/abstract/document/8765729">IEEE access article</a>, 
       <a class="button" href="https://ieeexplore.ieee.org/abstract/document/8918371">IEEE Systems article</a>
       
@@ -223,7 +228,7 @@
     </li> 
 
     <li><b>Hessian-polar context: a descriptor for microfilaria recognition:</b><br>
-      <div class="tag"> Object detection, C-SVM, Matlab, Local Descriptors, Cross-Validation, Deep Learning</div>
+      <div class="hashtag"> Object detection, C-SVM, Matlab, Local Descriptors, Cross-Validation, Deep Learning</div>
       <div class="row">
         <div class="column">
           <img src="images/objectDetectionSteps.png" alt="sdn" style="width: 110%"/> 
@@ -238,29 +243,50 @@
     </li> 
 
     <li><b>Iterative illumination correction with implicit regularization:</b><br>
-      <div class="tag"> ill-posed inverse problems, image degradation, iterative least-squares, boosting, QR-factorization, R-squared</div>
+      <div class="hashtag"> ill-posed inverse problems, image degradation, iterative least-squares, boosting, QR-factorization, R-squared</div>
       <img src="images/illumication_correction_animate.gif" alt="illumination correction" class="left" style="width: 80%"/> 
       <a class="button" href="https://link.springer.com/article/10.1007/s11760-015-0847-4">article</a>|<a class="button" href="https://github.com/fmstam/SHEBA/blob/master/Sheba/src/image/filter/plugins/WatershedBiasRemover_R2.java">source code</a>
       <p> A retrospective algorithm for correcting the uneven illumination field in microscopy images. The illumination field is iteratively made uniform using an increasing sequence of bivariate polynomials. At each iteration, the least squares problem of fitting a 2-D polynomial to a sampled image is solved by using QR decomposition with column pivoting, where image samples are obtained by dynamic programming or watershed transform. This incremental scheme allows the smoothness constraint of the estimated bias field to be implicitly satisfied. The proper number of iterations is determined by an automatic stopping criterion.
         This algorithm is similar to the Gradient Boosting with stopping criterion where the R-squared is used to determine the deterioration in the correction boosting.
       </p>
     </li> 
-  </ul> <hr>
+  </ul> 
 </div>
 
 <div class="content" id="dataScience">
   <div class="title">Selected Tutorial:</div> <a href="#">Go to top</a>
   <ul>
-    <li><b>Sequence to Sequence in Pytorch, Luonge, Ptr-nets models, and more with examples</b><br> 
-      <div class="tag"> Pytorch, python, attention-based models</div>
-      <p> My solution of the ML 30 Days competition with multi-level stacking with multi-seeds.</p>
+    <li><b>Sequence to Sequence in Pytorch, Loung, Ptr-nets models, and more with examples</b><br> 
+      <div class="hashtag"> Pytorch, python, attention-based models</div>
+      <p> This work is the minimal pytorch implementation of some sequence to sequence (seq2seq) models:
+          Loung seq2seq model: used in NLP sequence to sequence translation
+          Pointer networks: an important piece in many combinatorial neural networks. 
+          <a class="button" href="https://github.com/fmstam/seq2seq_with_deep_attention">source code and some examples</a>
+          
+      </p>
+      <div class="row">
+        <div class="column">
+          <img src="images/ptr_net.png" alt="ptr net" style="width: 80%"/> 
+        </div>
+        <div class="column">
+          <img src="images/ptr_machine.png" alt="ptr net" style="width: 80%"/> 
+        </div>
+      </div>
     </li> 
 
     <li><b>Generalized stacking with multiple seeds made easy</b><br> 
-        <div class="tag"> Pandas, python, XGBoost, LightGBM, CatBoost, sklearn</div>
-        <p> My solution of the ML 30 Days competition with multi-level stacking with multi-seeds.</p>
+        <div class="hashtag"> Pandas, python, XGBoost, LightGBM, CatBoost, sklearn</div>
+        <p> My solution of the ML 30 Days competition with multi-level stacking with multi-seeds:
+          <a class="button" href="https://github.com/fmstam/seq2seq_with_deep_attention">source code of the solution</a>
+        </p>
     </li> 
-  </ul> <hr>
+
+    <li><b>More tutorial will be posted here for feature engineering, pseudo labeling, deep learning for tabular, and more things I am learning</b><br> 
+      <div class="hashtag"> Pandas, python, XGBoost, LightGBM, CatBoost, sklearn, TF2, dask</div>
+      
+  </li> 
+
+  </ul> 
 </div>
 </body>
 </html>

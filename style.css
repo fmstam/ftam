@@ -5,8 +5,8 @@
 body {
     margin: 0;
     font-family: "Lato", sans-serif;
-    /* font-size: 95.5%; */
-    font-size: 1.8em;
+    font-size: 100%;
+    /* font-size: 1.5em; */
   }
   
   .left {
@@ -59,44 +59,46 @@ body {
   }
 
   div.title {
-    background-color: #d0d6d8;
+    background-color: #e5e8e9;
     font-size: larger;
     font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
     /* border-style: solid; */
+    font-weight: bold;
     top: 50%;
     left: 1%;
     right: 1%;
   }
 
-  .tag {
+  div.hashtag {
     display: block;
-    /* width: 150px; */
     height: 40px;
-    background: #e7e9eb;
+    background: #e5e8eb;
     padding: 10px;
     text-align: center;
-    text-decoration:none;
-    display:inline-block;
+    text-decoration: none;
+    display: inline-block;
     border-radius: 5px;
     color: rgb(0, 0, 0);
     font-weight: bold;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 25px;
 }
 
   .button {
     display: block;
     /* width: 150px; */
-    height: 50px;
+    /* height: 30px; */
     background: #a7d2f3;
     padding: 10px;
     text-align: center;
-    text-decoration:none;
-    display:inline-block;
+    text-decoration: none;
+    display: inline-block;
     border-radius: 5px;
     color: rgb(0, 0, 0);
     font-weight: bold;
-    line-height: 25px;
+    /* line-height: 25px; */
 }
 
 
