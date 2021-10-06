@@ -4,7 +4,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Faroq AL-Tam</title>
 <link rel="stylesheet" href="style.css">
+<!-- JQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- google code formatter (code-prettify)-->
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
 <script src="script.js"></script>
 </head>
 <body>
@@ -14,14 +18,14 @@
   <a href="#software">Software</a>
   <a href="#research">Research</a>
   <a href="#dataScience">Data Science</a>
-  <a href="#contact">Contact</a>
+  <!-- <a href="#contact">Contact</a> -->
   <a href="#about">About</a>
 </div>
 
 <div class="content">
-  <img src="images/img.jpeg" alt="f.altam" width="20%" />      
+  <img src="images/ftam.png" alt="f.altam" width="10%" />      
   <h2>F. AL-Tam</h2>
-  <p>Software Engieer | Data Sceintist | Lecturer in Computer Sceince</p>
+  <p>Software Engineer | Data Scientist | Lecturer in Computer Science</p>
   <a class="button" href="https://github.com/fmstam">github</a>|<a class="button" href="https://scholar.google.com/citations?user=jUSeyhkAAAAJ&hl=en">scholar</a>|<a class="button" href="https://uk.linkedin.com/in/faroq-al-tam-3595b2192">linkedin</a>|<a class="button" href="https://stackoverflow.com/users/1264721/faroq-al-tam">stackoverflow</a>
 </div>
 
@@ -29,19 +33,17 @@
   <div class="title">About:</div> 
   
   Experienced AI research scientist, software engineer, and lecturer with European PhD in computer science from the University of Algarve (UAlg) and the Danish Technical University (DTU). 
-  Long problem-solving experience in many domains including image processing, and communications. Worked with various data types, including tabular, sequential, graph, 2-D, and 3-D. Clear thinker and collaborative team worker. 
+  Long problem-solving experience in many domains including image processing and communications. Worked with various data types, including tabular, sequential, graph, 2-D, and 3-D. Fast learner, disciplined, clear thinker, and collaborative team worker. 
 
   <div class="title">Skills:</div> <a href="#">Go to top</a>
   <ul>
     <li><b>Programming stack</b> includes many programming, prototyping, and scripting language including: c/c++, java, matlab, python, javascript, PHP, ...</li>
     <li><b>Data Science stack</b> includes regression analysis and hypothesis testing with statsmodels, AutoML, GBDT (XGBoost, LightGBM, and CatBoost), t-SNE, BGMM, sklearn, scipy, pandas, dask, Tensorflow, Pytorch, Keras, seaborn, and matplotlib</li>
     <li><b>Web and micro-services stack</b> includes HTML, CSS, javascript, Django, and Docker</li>
-    <li><b>Database stack</b> includes MySql, SQLite, BigQuery, Oracle, PL/SQL</li>
+    <li><b>Database stack</b> includes MySQL, SQLite, BigQuery, Oracle, PL/SQL</li>
   </ul> 
-
 <hr>
 </div>
-
 
 <!-- list of projects ---------------------------------------------------------------->
 
@@ -49,22 +51,22 @@
   <div class="title">Selected Software:</div> <a href="#">Go to top</a>
   <ul>
     <li><b>Thammar University Website</b><br> 
-        <div class="tag"> PHP, MySql, HTML, CSS, javascript</div>
+        <div class="tag"> PHP, MySQL, HTML, CSS, and javascript</div>
         <p> The university website with both frontend and backend being developed to allow a flexible customization of dynamic creation of pages and content.</p>
     </li> 
 
     <li><b>Student Management System </b><br>
-      <div class="tag"> Oracle, PL/SQL, C++</div>
+      <div class="tag"> SQL, PL/SQL, C++</div>
       <p> The complete student management system from registration to certificates production with flexible backend to customize entry requirement and reports/certificates production.</p>
     </li> 
 
     <li><b>Warehouse Management System</b><br>
-      <div class="tag"> Oracle, PL/SQL, C++</div>
+      <div class="tag"> SQL, PL/SQL, C++</div>
       <p>Warehouse management for one of the baggiest trading companies.</p>
     </li> 
 
     <li><b>Trademark Management System</b><br>
-      <div class="tag"> Oracle, PL/SQL, C++</div>
+      <div class="tag"> SQL, PL/SQL, C++</div>
       <p>Trademark management system for one of the baggiest trading companies.</p>
     </li> 
 
@@ -74,37 +76,118 @@
     </li> 
 
 
+    <li><b>CEOT-DRL is a deep reinforcement learning (DRL) package</b><br>
+      <div class="tag"> Deep Learning, Deep Reinforcement Learning, Python, Pytorch, TF2, matplotlib</div>
+      <!-- <img src="images/p-trap.png" alt="P-TRAP" class="left" style="width: 80%"/>       -->
+      <p>
+        CEOT-DRL is a deep reinforcement learning (DRL) package mainly used in the Centro de Electrónica, Optoelectronica e Telecomunicações (CEOT) research center: https://www.ceot.ualg.pt/ for DRL research on networking and systems. CEOT-DRL is designed such that it abstracts almost everything. 
+        Therefore, regardless of which computational graph platform is used to define the neural nets, it still can run smoothly.
+      </p>
+
+      Inspired by the Matlab Reinforcement Learning Toolbox, CEOT-DRL decomposes the learning task into scenario, environment, model, and a training manager.
+      This design allows us to focus on the problem to develop the required scenario and let the training manager does the whole end to end training and testing.
+      
+      
+      The following example shows how to solve the CartePole-v1 problem using an Actor-Critic model trained by the training manager. 
+      The source code is available here: <a class="button" href="https://github.com/fmstam/MLS"> source code</a> 
+      (this is first experimental version and the latest version will be publicly available soon).
+      
+      
+      <pre class="prettyprint">
+        
+        import sys
+        import timeit
+        
+        from MLS.ceot_drl.scenarios import scenario_ac as s
+        from MLS.ceot_drl.core.TrainingManager import TrainingManager as TM
+        
+        sys.path.append("..")
+
+        def main():
+            # define a training manager object
+            tm = TM(s.num_episodes, 
+                    s.episode_length, 
+                    s.agent,
+                    s.env,
+                    log_file=s.log_file)
+        
+            print('Scenario:%s' % s.title)
+            start = timeit.default_timer()
+            # let it do the magic
+            tm.run(verbose=False)
+            end = timeit.default_timer()
+            print('\n It took ~{} useconds'.format(str(round(end-start))))
+        
+
+        if __name__ == "__main__":
+           main()
+      </pre>
+
+    </li> 
+
+
+    <li><b>Sheba: a lightweight image processing library</b><br>
+      <div class="tag"> Java, NetBeans Platform, Efficient Java Matrix Library (EJML)</div>
+      <!-- <img src="images/p-trap.png" alt="P-TRAP" class="left" style="width: 80%"/>       -->
+  
+      <p>A free open source lightweight image (and signal) processing package which is designed ground-up based on the best practices found in some existed packages like imagej and cellprofiler.
+      Sheba is headless with only abstract classes (interfaces in fact) to develop functional components. It is designed to act as a container of components like channel, plugin, filter, or pipeline. It basically creates pipelines and executes them, which is helpful for fast prototyping, or a developing a lightweight core module of an application that requires image processing.
+      The main advantage of Sheba is its high modulation, and simplicity to create image processing pipelines.
+      In Sheba the input and output are channels. An image, for instance, can contain multiple channels and can be processed by filters. To realize image processing pipelines,
+      Sheba arranges them in a sequence of filters (i.e. a pipeline). For instance, if the task is to segment an image. This can be done by creating a pipeline that starts by gaussian filter (smoothing plugin), followed by a grayscale filter (conversion plugin), followed by a segmentation filter (segmentation plugin).
+      </p>
+
+      The following example shows how to calculate a polynomial illumination field from a grayscale image.
+      Sheba's source code can be found here:
+      <a class="button" href="https://github.com/fmstam/SHEBA/tree/master/Sheba/src">source code</a>
+      
+      
+      <pre class="prettyprint">
+
+      // build a pipeline to estimate the illumination surface of an image using a 2-D polynomial of polynomialDegree degree 
+      Pipeline pipeline = new Pipeline();
+      pipeline.addTask(new Scale(downSamplingFactor)); // scale down
+      pipeline.addTask(new IlluminationSurface(IlluminationSurface.SurfaceType.Polynomial, polynomialDegree)); // estimate the illumination field
+      pipeline.addTask(new Scale((1 / downSamplingFactor))); // scale up back    
+      outputImage = imageFilter.run(inputImage, pipeline); // run the pipeline on the image.
+      </pre>
+    Moreover, Sheba is allows adding compiled plugins without changing the code or modifying the pipelines. 
+    This can be helpful when a team works on the pipeline where plugins can be tested locally and deployed to the final system.
+    
+    </li> 
+
     <li><b>P-TRAP: a panicle trait phenotyping tool</b><br>
       <div class="tag"> Java, NetBeans Platform, OpenCV</div>
       <img src="images/p-trap.png" alt="P-TRAP" class="left" style="width: 80%"/>      
-      <a class="button" href="https://bmcplantbiol.biomedcentral.com/articles/10.1186/1471-2229-13-122">article</a>|<a class="button" href="https://github.com/fmstam/P-TRAP">download</a>
+      <a class="button" href="https://bmcplantbiol.biomedcentral.com/articles/10.1186/1471-2229-13-122">article</a>|
+      <a class="button" href="articles/P-TRAP_manual.pdf">See the user manual</a>
       <p>A free open source application for high-throughput measurements of panicle architecture and seed-related traits. 
         The software is written in Java and can be used with different platforms (the user-friendly Graphical User Interface (GUI) uses Netbeans Platform 7.3). The application offers three main tools: a tool for the analysis of panicle structure, a spikelet/grain counting tool, and a tool for the analysis of seed shape. The three tools can be used independently or simultaneously for analysis of the same image. Results are then reported in the Extensible Markup Language (XML) and Comma Separated Values (CSV) file formats. Images of rice panicles were used to evaluate the efficiency and robustness of the software. Compared to data obtained by manual processing, P-TRAP produced reliable results in a much shorter time. In addition, manual processing is not repeatable because dry panicles are vulnerable to damage. 
-        The software is very useful, practical and collects much more data than human operators. It has been used in many research center and despite being developed in 2013 it still one of the top systems in panicle image analysis.
+        The software is very useful, practical and collects much more data than human operators. It has been used in many centers around the world and despite being old (developed in 2013) and with little maintenance and upgrade, it still one of the top and most used systems in panicle image analysis. 
+        There are more powerful and precise new systems that use the state-of-art image processing libs and more sophisticated algorithms but P-Trap is platform-independent, user-centered, and easy to used with fantastic GUI. 
         </p>
     </li> 
 
     <li><b>DNAGear- a free software for spa type identification in Staphylococcus aureus</b><br>
       <div class="tag"> Java, NetBeans Platform</div>
       <img src="images/dnagear.jpeg" alt="DNAGear" class="left"/>      
-      <a class="button" href="https://link.springer.com/article/10.1186/1756-0500-5-642">article</a>|<a class="button" href="https://github.com/fmstam/DNAGEAR">download</a>
+      <a class="button" href="https://link.springer.com/article/10.1186/1756-0500-5-642">article</a>|<a class="button" href="https://github.com/fmstam/DNAGEAR">source code</a>
       <p>A free and open source software with a user friendly interface written all in Java on top of NetBeans Platform to perform spa typing, detecting new repeats and new spa types and synchronizing automatically the files with the open access database. The installation is easy and the application is platform independent. In fact, the SPA identification is a formal regular expression matching problem and the results are 100% exact. As the program is using Java embedded modules written over string manipulation of well established algorithms, the exactitude of the solution is perfectly established.        </p>
     </li> 
 
     <li><b>Peptide Mass Fingerprinting Tool Using Mass Spectrum Generated By MALDI-TOF:</b><br>
       <div class="tag"> Java, NetBeans Platform, BioJava</div>
-      <img src="images/pmf.png" alt="PMF" class="left"/> 
-
-      <a class="button" href="https://github.com/emanSaad/Peptide_Mass_Fingerprting_App">download</a>
+      <img src="images/pmf.png" alt="PMF" class="left" style="width: 50%"/> 
+      <a class="button" href="https://github.com/emanSaad/Peptide_Mass_Fingerprting_App">source code</a>
       <p> Protein identification using Mass Spectrometry (MS) is essential in the study of proteomics and one of the most popular methods for protein identification using MS data. This project provides a free computational tool for protein identification using PMF data. It introduces a new scoring method to help in identifying the correct protein. </p>
     </li> 
   </ul> <hr>
 </div>
 
 <div class="content" id="research">
-  <div class="title">Selected Articles:</div> <a href="#">Go to top</a>
+  <div class="title">Research: Selected Articles:</div> <a href="#">Go to top</a>
   <ul>
-    <li><b>Resource Scheduling using Deep Reinforcement Learning:</b><br>
+    <li><b>Radio Resource Scheduling in 5G Networks using Deep Reinforcement Learning:</b><br>
       <div class="tag"> Deep Learning, Deep Reinforcement Learning, Pointer-Nets, Deep Pointer-Critic models, Sequence-to-Sequence, LSTM, 5G</div>
    
       <img src="images/ptr_critic.png" alt="sdn" style="width: 60%"/> 
@@ -157,7 +240,7 @@
     <li><b>Iterative illumination correction with implicit regularization:</b><br>
       <div class="tag"> ill-posed inverse problems, image degradation, iterative least-squares, boosting, QR-factorization, R-squared</div>
       <img src="images/illumication_correction_animate.gif" alt="illumination correction" class="left" style="width: 80%"/> 
-      <a class="button" href="https://link.springer.com/article/10.1007/s11760-015-0847-4">article</a>|<a class="button" href="">download</a>
+      <a class="button" href="https://link.springer.com/article/10.1007/s11760-015-0847-4">article</a>|<a class="button" href="https://github.com/fmstam/SHEBA/blob/master/Sheba/src/image/filter/plugins/WatershedBiasRemover_R2.java">source code</a>
       <p> A retrospective algorithm for correcting the uneven illumination field in microscopy images. The illumination field is iteratively made uniform using an increasing sequence of bivariate polynomials. At each iteration, the least squares problem of fitting a 2-D polynomial to a sampled image is solved by using QR decomposition with column pivoting, where image samples are obtained by dynamic programming or watershed transform. This incremental scheme allows the smoothness constraint of the estimated bias field to be implicitly satisfied. The proper number of iterations is determined by an automatic stopping criterion.
         This algorithm is similar to the Gradient Boosting with stopping criterion where the R-squared is used to determine the deterioration in the correction boosting.
       </p>
